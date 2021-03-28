@@ -761,6 +761,21 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
     font-size: 25px;
 }
 /*responsibe*/
+@media screen and  (max-width:1080px){
+ /*footer*/
+    footer{
+        justify-content: space-evenly;
+
+    }
+    .contenido-footer{
+        width: 30%;
+        margin-bottom: 30px;
+    }
+    .footer-secundarios{
+        margin: -40px 0 0 0 ;
+        text-align: center;
+    }
+}
 @media screen and  (max-width:800px){
     .contenido_slider>   img{
         width: 250px;
