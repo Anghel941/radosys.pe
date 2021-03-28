@@ -777,7 +777,7 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
     }
     .contenido_header{
         margin: 50px 0 0 0 ;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-evenly;
         height: 720px;
 
@@ -889,10 +889,17 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
      }
 }
 @media screen and  (max-width:650px){
+
+    .slider_contenedor{
+        margin: 50px 0 0 0;
+    }
     .contenido_slider{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .contenido_slider>div{
+        width: 80%;
+    }
+    .contenido_slider img{
         width: 80%;
     }
 
