@@ -869,7 +869,7 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
        display: none;
      }
 
-   /*mapas formulario*/
+   
    .contenedor-mapa{
        width: 80%;
    }
@@ -966,11 +966,11 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
          font-size: 35px;
      }
      /*productos formulario*/
-     .productos-derecha .producto{
+     .producto{
         width: 95%;
      }
-     .productos-iquierda h5{
-         font-size: 35px;
+     .producto a{
+        padding: 0.5rem 1.1rem;
      }
        /*marcas socias*/
     .marcas_socias{
@@ -997,16 +997,26 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
    .check-valores h4{
        width: 100%;
    }
+    /*CURSOS*/
+    .curso{
+        width: 90%;
+     }
+     .curso h3{
+         font-size: 20px;
+     }
+     .curso a{
+        padding: 0.5rem 1.1rem;
+     }
 
     /*contactanos formulario*/
    .container{
        text-align: center;
-       margin-left: 150px;
+       margin-left: 220px;
    }
      .form{
    
        text-align: center;
-       width: 80%;
+       width: 65%;
       
      }
     
