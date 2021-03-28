@@ -775,6 +775,11 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
         margin: -40px 0 0 0 ;
         text-align: center;
     }
+
+/*header*/
+    .contenido_header>img{
+        width: 60%;
+    }
 }
 @media screen and  (max-width:800px){
     .contenido_slider>   img{
@@ -1009,7 +1014,7 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
     .valoress{
         flex-direction: column-reverse;
         align-items: center;
-        
+        padding: 10px;
     }
     .valoress>img{
         margin: -70px 0 -70px 0;
