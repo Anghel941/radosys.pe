@@ -17,7 +17,7 @@
         <nav>
             <section class="contenedor nav">
                 <div class="logo">
-                    <a href="index.html"><img src="img/Logo_radosis.png" alt="" ></a> 
+                    <a href="index.html"><img src="img/Logos/Logo_radosis.png" alt="" ></a> 
                 </div>
                 <ul class="menu"> 
                     <li><a href="nosotros.html">Nosotros</a></li>
@@ -41,15 +41,15 @@
                     <center>
                         <form action="correo.php" method="POST" class="form" name="enviar_correo">
                             <h2>Enviar mensaje</h2>
-                            <input type="text" name="nombre" id="" placeholder="Nombre" class="name" required>
-                            <input type="text" name="asunto" id="" placeholder="Asunto" class="name" required>
-                            <input type="email" name="correo" id="" placeholder="Email" class="email" required>
-                            <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                            <button type="submit" class="btn">Enviar</button>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="name" required>
+                            <input type="text" name="asunto" id="asunto" placeholder="Asunto" class="name" required>
+                            <input type="email" name="correo" id="correo" placeholder="Email" class="email" required>
+                            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                            <button type="submit" class="btn" onclick="javascript:enviar_correo();">Enviar</button>
                         </form>
                     </center>
                         <div class="img-covere">
-                            <img src="img/Radosis.png" >
+                            <img src="img/Logos/Radosis.png" >
                         </div>
                 </div>
             </section>
@@ -90,7 +90,7 @@
     <footer class="footer">
         <div class="footer-principal">
             <section class="contenido-footer">
-                <img src="img/radosys_das.png" width="240" height="70" data-aos="flip-right" data-aos-duration="2000">
+                <img src="img/Logos/radosys_das.png"  width="240" height="70" data-aos="flip-right" data-aos-duration="2000">
              </section>
              <section class="contenido-footer">
                  <div>
@@ -138,6 +138,32 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
     AOS.init();
+    </script>
+
+    <script>
+        function enviar_correoo(){
+            var correo=new FormData();
+            correo.append("nombre",document.getElementById("nombre").value);
+            correo.append("asunto",document.getElementById("asunto").value);
+            correo.append("correo",document.getElementById("correo").value);
+            correo.append("mensaje",document.getElementById("mensaje").value);
+            $.ajax({
+                url:"correo.php",
+                type:"POST",
+                data: correo,
+                cache:false,
+                contentType:false,
+                processData:false,
+               
+                success:function(resp){
+                    console.log(resp);
+                    msj=JSON.parse(resp);
+                    alert(msj.mensaje);
+
+                }
+
+            })
+        }
     </script>
 </body>
 </html>
