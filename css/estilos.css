@@ -414,7 +414,7 @@ box-shadow: 0 4px 10px rgba(17, 29, 48,.26);
     padding-bottom: 20px;
     
 }
-.producto a{
+.boton_productos {
     text-align: center;
     border-radius: 20px;
     background-color: #fff;
@@ -424,12 +424,64 @@ box-shadow: 0 4px 10px rgba(17, 29, 48,.26);
     color: #000000;
     text-decoration: none;
 }
-.producto>a:hover{
+.boton_productos:hover{
     color: #81C12C;
     transition: color .5s;
 }
+.producto img{
+    transition: transform 0.5s;
+}
+.producto a:hover img{
+    transform: rotate(10deg) scale(1.1);
+}
 
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
 
+.light-box img{
+    width: 65vw;
+    max-height: 70vh;
+}
+.light-box:target{
+    transform: scale(1);
+}
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #81C12C;
+    color: #fff;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.next{
+    display: block;
+    background-color: #81C12C;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
 /*Cursos*/
 .cursos{
     background-color: #fff;
@@ -840,7 +892,7 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
      .producto{
         width: 45%;
      }
-     .producto a{
+     .boton_productos{
         padding: 0.6rem 1.3rem;
      }
       /*CURSOS*/
@@ -972,8 +1024,9 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
     }
     /*servicios*/
     .servicio{
-        width: 95% ;
+        width: 100% ;
     }
+   
     /*vision mision*/
 
     .contenido_vision_mision{
@@ -996,7 +1049,7 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
      .producto{
         width: 95%;
      }
-     .producto a{
+     .boton_productos{
         padding: 0.5rem 1.1rem;
      }
        /*marcas socias*/
@@ -1063,6 +1116,31 @@ box-shadow: 0 10px 50px rgba(17, 29, 48,.40);
     
     
 }
+@media screen and  (max-width:415px){
+    body .titulo{
+        font-size: 30px;
+    }
+     /*servicios*/
+    .contenedor-servicios h3{
+        font-size: 20px;
+    }
+
+    /*vision mision*/
+    .contenido_vision_mision{
+        margin: -5px 0 0 -20px;
+       
+    }
+    
+    .contenido_vision_mision>img{
+      
+        width: 200px;
+       
+    }
+    .textos_vision_mision h1{
+        font-size: 30px;
+    }
+  
+}
 
 
-/*breakpoints responsibe*/
+
